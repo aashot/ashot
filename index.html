@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ashot Hovhannisyan</title>
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #fff;
+      --fg-dim: #888;
+      --border: #222;
+      --accent: #fff;
+      --max-width: 1200px;
+      --font-stack: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Inter","Roboto","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-stack);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .page {
+      width: 100%;
+    }
+
+    .section {
+      width: 100%;
+      border-top: 1px solid var(--border);
+    }
+
+    .inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero .inner {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .name {
+      font-size: clamp(2.5rem, 2.5vw + 1rem, 3.5rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--fg);
+    }
+
+    .tagline {
+      margin-top: 1.5rem;
+      max-width: 800px;
+      font-size: clamp(1rem, 0.2vw + 0.9rem, 1.125rem);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--fg-dim);
+    }
+
+    .meta-row div {
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+
+    .label {
+      color: var(--fg-dim);
+      min-width: 70px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .value {
+      color: var(--fg);
+      font-size: 0.9rem;
+    }
+
+    /* SECTION HEADER */
+    .section-header {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--fg-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
+
+    /* FLEX GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .block {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      background-color: rgba(255,255,255,0.015);
+    }
+
+    .block-title {
+      font-size: 0.9rem;
+      color: var(--fg);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .block-meta {
+      font-size: 0.8rem;
+      color: var(--fg-dim);
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .block-desc {
+      font-size: 0.9rem;
+      color: var(--fg);
+      line-height: 1.5;
+    }
+
+    /* STACK LIST */
+    .stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--fg);
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 0.75rem;
+      line-height: 1.2;
+      background-color: rgba(255,255,255,0.03);
+      white-space: nowrap;
+    }
+
+    /* FOOTER */
+    .footer-note {
+      font-size: 0.8rem;
+      color: var(--fg-dim);
+      margin-top: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="inner">
+        <div class="name">Ashot Hovhannisyan</div>
+
+        <div class="tagline">
+          Frontend-focused full-stack engineer. 9+ years shipping production software.
+          I build fast, reliable web interfaces and the systems behind them.
+          I care about performance, clean architecture, and not wasting users’ time.
+          I’ve worked on SDKs, real-time audio processing in the browser, internal tooling,
+          design systems, and high-traffic dashboards.
+        </div>
+
+        <div class="meta-row">
+          <div>
+            <span class="label">Location</span>
+            <span class="value">Yerevan, Armenia</span>
+          </div>
+          <div>
+            <span class="label">Focus</span>
+            <span class="value">Web performance · DX · Reliability</span>
+          </div>
+          <div>
+            <span class="label">Contact</span>
+            <span class="value">
+              <a href="mailto:hovhannisyan022@gmail.com">hovhannisyan022@gmail.com</a>
+            </span>
+          </div>
+          <div>
+            <span class="label">LinkedIn</span>
+            <span class="value">
+              <a href="https://www.linkedin.com/in/iamashot" target="_blank" rel="noopener noreferrer">iamashot</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENT WORK -->
+    <section class="section">
+      <div class="inner">
+        <div class="section-header">Work</div>
+
+        <div class="grid grid-2">
+          <!-- Krisp -->
+          <div class="block">
+            <div class="block-title">Senior Software Engineer @ Krisp</div>
+            <div class="block-meta">
+              Voice AI <br/>
+              JavaScript / TypeScript / WebAssembly / React / Node / MySQL / AWS
+            </div>
+            <div class="block-desc">
+             Building and enhancing the Krisp JavaScript SDK; creating example apps; writing clear SDK documentation; setting up CI/CD; supporting client onboarding; writing unit and integration tests; and developing the SDK Portal for SDK and model management.
+            </div>
+          </div>
+
+          <!-- Hexens -->
+          <div class="block">
+            <div class="block-title">Senior Frontend Engineer @ Hexens</div>
+            <div class="block-meta">
+              Security platform / dashboard work.<br/>
+              React / TypeScript / GraphQL
+            </div>
+            <div class="block-desc">
+              Cut legacy front-end debt, rewired the UI architecture,
+              and built a shared UI kit so new screens could be shipped
+              fast instead of copied badly. Drove perf audits that
+              boosted satisfaction and helped the team ship cleaner,
+              more maintainable code across the app.  [oai_citation:0‡Resume-Ashot-Hovhannisyan.pdf](sediment://file_000000009770622f834986bfacb29247)
+            </div>
+          </div>
+
+          <!-- Fastex -->
+          <div class="block">
+            <div class="block-title">Senior Frontend Engineer @ Fastex</div>
+            <div class="block-meta">
+              Complex dashboards at scale.<br/>
+              React / Vue / TypeScript
+            </div>
+            <div class="block-desc">
+              Worked on multi-app frontends with independent deploys,
+              improved code quality and stability, cut production issues,
+              and helped teams ship without stepping on each other.
+              Helped set up pipelines and mentored interns into real
+              contributors instead of “ticket runners.”  [oai_citation:1‡Resume-Ashot-Hovhannisyan.pdf](sediment://file_000000009770622f834986bfacb29247)
+            </div>
+          </div>
+
+          <!-- Prelaunch -->
+          <div class="block">
+            <div class="block-title">Full Stack Engineer @ Prelaunch.com</div>
+            <div class="block-meta">
+              Product validation / e-commerce tools.<br/>
+              React / Node / AWS
+            </div>
+            <div class="block-desc">
+              Built and maintained the website builder and user dashboard,
+              plus internal UI libraries. Worked very close to the product:
+              fast iteration, keeping things stable while shipping new stuff.
+              Wrote docs, mentored juniors, and kept architecture sane.  [oai_citation:2‡Resume-Ashot-Hovhannisyan.pdf](sediment://file_000000009770622f834986bfacb29247)
+            </div>
+          </div>
+
+          <!-- Space307 -->
+          <div class="block">
+            <div class="block-title">Senior Full Stack Engineer @ Space307</div>
+            <div class="block-meta">
+              Platform: doto.com<br/>
+              React / Vue / Node / GraphQL
+            </div>
+            <div class="block-desc">
+              Helped unify front-end standards across teams, set up a monorepo,
+              improved build tooling, wrote onboarding docs, and tightened up
+              the release process so pushing to prod wasn’t chaos.  [oai_citation:3‡Resume-Ashot-Hovhannisyan.pdf](sediment://file_000000009770622f834986bfacb29247)
+            </div>
+          </div>
+
+          <!-- Envato -->
+          <div class="block">
+            <div class="block-title">Frontend Engineer @ Envato</div>
+            <div class="block-meta">
+              High-volume web product work.<br/>
+              React / Vue / JS / HTML / CSS
+            </div>
+            <div class="block-desc">
+              Delivered SPAs and PWAs, optimized load time, and shipped
+              dozens of front-end builds. Focus was experience: speed,
+              visual quality, no drama across browsers.  [oai_citation:4‡Resume-Ashot-Hovhannisyan.pdf](sediment://file_000000009770622f834986bfacb29247)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK / SKILLS -->
+    <section class="section">
+      <div class="inner">
+        <div class="section-header">Stack / what I actually use</div>
+
+        <div class="grid grid-3">
+          <div class="block">
+            <div class="block-title">Core languages</div>
+            <div class="block-desc">
+              <div class="stack-row">
+                <span class="chip">JavaScript</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Frameworks & Libraries</div>
+            <div class="block-desc">
+              <div class="stack-row">
+                <span class="chip">React</span>
+                <span class="chip">Vue</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Express</span>
+                <span class="chip">GraphQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Platform / Infra</div>
+            <div class="block-desc">
+              <div class="stack-row">
+                <span class="chip">Node.js</span>
+                <span class="chip">WebAssembly</span>
+                <span class="chip">AWS</span>
+                <span class="chip">GCP</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Testing & automation</div>
+            <div class="block-desc">
+              <div class="stack-row">
+                <span class="chip">Jest</span>
+                <span class="chip">Mocha</span>
+                <span class="chip">Cypress</span>
+                <span class="chip">Playwright</span>
+                <span class="chip">Puppeteer</span>
+                <span class="chip">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Ways of working</div>
+            <div class="block-desc">
+              <div class="stack-row">
+                <span class="chip">Performance audits</span>
+                <span class="chip">Design systems</span>
+                <span class="chip">Developer experience</span>
+                <span class="chip">Agile / Scrum / Kanban</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">What I enjoy</div>
+            <div class="block-desc">
+              Making slow things fast. Killing useless complexity.
+              Shipping tools that other engineers actually want to use.
+              Mentoring devs so they stop guessing and start owning.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <section class="section">
+      <div class="inner">
+        <div class="section-header">Contact</div>
+
+        <div class="grid grid-2">
+          <div class="block">
+            <div class="block-title">Let's talk</div>
+            <div class="block-desc">
+              Email:
+              <a href="mailto:hovhannisyan022@gmail.com">hovhannisyan022@gmail.com</a><br/>
+              LinkedIn:
+              <a href="https://www.linkedin.com/in/iamashot" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/iamashot
+              </a><br/>
+              Location: Yerevan, Armenia
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-title">Status</div>
+            <div class="block-desc">
+              Senior frontend / full-stack engineer.<br/>
+              Building SDKs, debugging browsers, helping products grow without turning into trash.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          Built by hand. No framework. No tracking. Just HTML/CSS.
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
